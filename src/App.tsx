@@ -12,36 +12,27 @@ function App() {
   return (
     <>
       <header style={{
-        position: 'fixed',
+        position: 'sticky',
         top: 0,
-        left: 0,
-        width: '100%',
         zIndex: 1000,
-        background: 'rgba(255, 255, 255, 0.15)', // SLightly more opacity for contrast
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        boxShadow: '0 4px 30px rgba(0,0,0,0.05)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)', // Safari support
+        boxShadow: '0 4px 30px rgba(0,0,0,0.1)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
         padding: '1rem 0',
         transition: 'all 0.3s ease'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{
-            fontSize: '1.5rem',
-            fontFamily: 'var(--font-heading)',
-            color: 'var(--color-primary)',
-            margin: 0,
-            fontWeight: 'bold',
-            textShadow: '0 2px 4px rgba(255,255,255,0.8)' // White glow for readability
-          }}>
+          <h1 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-heading)', color: 'var(--color-primary)', margin: 0, fontWeight: 'bold' }}>
             Hồ Chí Minh Ideology
           </h1>
           <nav>
             <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', margin: 0, padding: 0 }}>
-              <li><a href="#independence" style={{ textDecoration: 'none', color: '#222', fontWeight: 'bold', fontSize: '0.95rem', textShadow: '0 0 10px rgba(255,255,255,0.8)' }}>Độc lập & Tự do</a></li>
-              <li><a href="#after-august" style={{ textDecoration: 'none', color: '#222', fontWeight: 'bold', fontSize: '0.95rem', textShadow: '0 0 10px rgba(255,255,255,0.8)' }}>Cách mạng T8</a></li>
-              <li><a href="#true-independence" style={{ textDecoration: 'none', color: '#222', fontWeight: 'bold', fontSize: '0.95rem', textShadow: '0 0 10px rgba(255,255,255,0.8)' }}>Độc lập thật sự</a></li>
-              <li><a href="#unity" style={{ textDecoration: 'none', color: '#222', fontWeight: 'bold', fontSize: '0.95rem', textShadow: '0 0 10px rgba(255,255,255,0.8)' }}>Thống nhất</a></li>
+              <li><a href="#independence" style={{ textDecoration: 'none', color: '#333', fontWeight: '600', fontSize: '0.95rem' }}>Độc lập & Tự do</a></li>
+              <li><a href="#after-august" style={{ textDecoration: 'none', color: '#333', fontWeight: '600', fontSize: '0.95rem' }}>Cách mạng T8</a></li>
+              <li><a href="#true-independence" style={{ textDecoration: 'none', color: '#333', fontWeight: '600', fontSize: '0.95rem' }}>Độc lập thật sự</a></li>
+              <li><a href="#unity" style={{ textDecoration: 'none', color: '#333', fontWeight: '600', fontSize: '0.95rem' }}>Thống nhất</a></li>
             </ul>
           </nav>
         </div>
@@ -559,6 +550,24 @@ function App() {
           <Timeline />
         </Section>
 
+        {/* Video Section for HCM202.mp4 */}
+        <Section title="Tư liệu Phim" className="bg-light">
+          <div style={{ width: '100%', margin: '0 auto', boxShadow: 'var(--shadow-strong)', borderRadius: '16px', overflow: 'hidden' }}>
+            <video
+              controls
+              width="100%"
+              style={{ display: 'block', background: '#000' }}
+              poster="https://file1.dangcongsan.vn/data/0/images/2023/08/25/upload/hcm-2.jpg" // Optional placeholder
+            >
+              <source src="/HCM202.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p style={{ textAlign: 'center', marginTop: '1.5rem', fontStyle: 'italic', color: '#666' }}>
+            Phim tư liệu: Hồ Chí Minh - Chân dung một con người
+          </p>
+        </Section>
+
         {/* Gallery Section */}
         <Section title="Di sản Hình ảnh" className="bg-light">
           <Gallery />
@@ -570,6 +579,15 @@ function App() {
             <div style={{ maxWidth: '600px', margin: '0 auto', opacity: 0.7, fontSize: '0.9rem', lineHeight: '1.6' }}>
               Trang web được xây dựng nhằm mục đích học tập và nghiên cứu. <br />
               Nội dung dựa trên các tài liệu lịch sử và văn kiện Đảng.
+              <br /><br />
+              <a
+                href="https://mail-attachment.googleusercontent.com/attachment/u/1/?ui=2&ik=9b92bc8307&attid=0.1&permmsgid=msg-f:1853649887896275855&th=19b97cc082000b8f&view=att&zw&disp=inline&saddbat=ANGjdJ_JcJjK8Xo3lCwV_lu9GQs8TNmmBlYQbNPtaq6qgeJe2m1Y6iEqxn93qOGSSAw5fxUptTOSdMe_u1JsVH9ngQmcNOl5F_LVfxuArz5pm-Toj0NHzhpRNNEFBK1nWqJdr7edhv_vJhWkJhFsSB8NDicUGQst81z1H9kS1IgElwMI4dGjiX8UUPxqJaXTkOZ7r4-qNFp7MR8jE_bT9WGm29ZFljPCMzmlAejYCqgSjjw0eJBThICuyNv_v8G1wvB2swMlqvATbLrGiUTssiqpLC2wHSnOP9TF3q5CYZv2fkaSE5KVbUonLpb7ho8iLX--4H8WH_eJWLFlfrhUOitGYg62GvQT93WX99H_7mPnNdanW_Xm2E_mpMPQey8KZXKgONrLboWDwv672tU-QHlrEOVYNuNgUj3lC3t23L5XYpb0LQ2zD40hEUIYqStLhXPLnkABwxC8yRRWJ1AxZHAP_xrKPAJQLWwHSU2NoZVfQtK5061Sk9f0Ro1hFoBq1gH-oGfuGIE5j-YgoFly_mc0ORGqvrxWs93d6N9vCLVqb3gas_5jodmPafLMThBM4V4iv6YI8fd3fkHPSb0ekqbsw8Hv0D2rKinqNmO9H5tjWe6fh6Q4MjQ_FNE2tnt2rENGUzwgZ2cQgtdcDkLJHb6UYNPkKYSEoQTnI0Z22x1tKmfekLidJAscUQh8GXr5SBWnCZykLT6CkjLmX-41UqoxbIo4-ChPiCiQYuZlCbKLIVttfSaQAaaif40nl4zffeANphfGD4tcU8ZydsWtPuCOx-PNz-xvJvDolVGhPBdj-73tPa0iQD7ADwCTJIlAkCw5Q1tfQk1_CfRgfNpN6YMb4wbzvIDgg8aPZL4JDsPjRZymz-6N_ax_Fc4-zhMzKrCvV8Bs_YtPJPmf2cTpOYEFTVy_djF_-NSf-hJGdbwv8JuhANsLiJmQ-s504aqNbkgDcQN1_UKBjBWYi1PJEPcDcer8fUmg6omFPiuVDefwtuenk9FsmfMeLVgkg7yU754757t1NhTWLG6L8RlX_ZLTvSe_fpQW_JdMKwR2XlocFltLYYPzefTzHUR4s08"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#f4f1ea', textDecoration: 'underline', fontWeight: 'bold' }}
+              >
+                📂 Tài liệu tham khảo chi tiết
+              </a>
             </div>
             <p style={{ marginTop: '40px', fontSize: '0.8rem', opacity: 0.4 }}>
               © 2026 HCM202 Project
