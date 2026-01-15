@@ -18,6 +18,14 @@ const images = [
     {
         src: "https://cdnmedia.baotintuc.vn/2017/05/18/11/40/bacho.jpg", // Example historical-looking CC placeholder
         caption: "Một đời vì nước vì dân"
+    },
+    {
+        src: "https://cdn-images.vtv.vn/562122370168008704/2024/5/19/cuoc-doi-chu-tich-ho-chi-minh-1716081147431415673549.png",
+        caption: "Năm 1920, Người tham gia thành lập Đảng Cộng sản Pháp tại Đại hội Tua"
+    },
+    {
+        src: "https://cdn-images.vtv.vn/thumb_w/1200/562122370168008704/2024/5/19/cuoc-doi-chu-tich-ho-chi-minh-1-17160811478211226209303.png",
+        caption: "Từ 1943 - 1945, Người cùng Ban Thường vụ Trung ương Đảng lãnh đạo Nhân dân Việt Nam đấu tranh giành độc lập dân tộc"
     }
 ];
 

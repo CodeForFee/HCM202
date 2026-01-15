@@ -552,16 +552,16 @@ function App() {
 
         {/* Video Section for HCM202.mp4 */}
         <Section title="Tư liệu Phim" className="bg-light">
-          <div style={{ width: '100%', margin: '0 auto', boxShadow: 'var(--shadow-strong)', borderRadius: '16px', overflow: 'hidden' }}>
-            <video
-              controls
+          <div style={{ width: '100%', margin: '0 auto', boxShadow: 'var(--shadow-strong)', borderRadius: '16px', overflow: 'hidden', position: 'relative', aspectRatio: '16/9' }}>
+            <iframe
+              src="https://player.cloudinary.com/embed/?cloud_name=dfmg8qv7g&public_id=HCM202_wj3at2"
               width="100%"
-              style={{ display: 'block', background: '#000' }}
-              poster="https://file1.dangcongsan.vn/data/0/images/2023/08/25/upload/hcm-2.jpg" // Optional placeholder
-            >
-              <source src="/HCM202.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              height="100%"
+              style={{ border: 'none', position: 'absolute', top: 0, left: 0 }}
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+              title="Hồ Chí Minh - Chân dung một con người"
+            ></iframe>
           </div>
           <p style={{ textAlign: 'center', marginTop: '1.5rem', fontStyle: 'italic', color: '#666' }}>
             Phim tư liệu: Hồ Chí Minh - Chân dung một con người
