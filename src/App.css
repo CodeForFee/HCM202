@@ -1,0 +1,521 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Layout Util Classes */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 1rem auto 0;
+  border-radius: 0;
+}
+
+.section-title::before {
+  /* Decorative element */
+  content: '§';
+  font-family: serif;
+  display: block;
+  font-size: 2rem;
+  color: var(--color-secondary);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Decorative Backgrounds */
+.bg-pattern-dot {
+  background-image: radial-gradient(#d4af37 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+}
+
+.bg-texture-paper {
+  background-color: #fdfbf7;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon-box {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Highlight Text */
+.highlight-text {
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+}
+
+/* Quote Styles - Editorial */
+.quote-box {
+  background-color: transparent;
+  border-left: 4px solid var(--color-secondary);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--color-primary-dark);
+  position: relative;
+}
+
+.quote-box::before {
+  content: '“';
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  color: rgba(212, 175, 55, 0.2);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  line-height: 1;
+}
+
+/* Video Container */
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-strong);
+  margin-top: var(--spacing-md);
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Timeline Styles - Thread of History */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 2rem 0;
+}
+
+/* Vertical Line */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--color-secondary);
+  /* Antique Gold Thread */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.timeline-item {
+  padding: 10px 50px;
+  /* Space for line and spacing */
+  position: relative;
+  background-color: transparent;
+  width: 50%;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  min-height: 200px;
+  /* Ensure height for image spacing */
+  display: flex;
+  /* To align content if needed */
+  flex-direction: column;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* Timeline Nodes - Custom */
+.timeline-item::after {
+  content: '★';
+  /* Star Symbol */
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary);
+  top: 25px;
+  /* Aligned with title */
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(196, 30, 58, 0.2);
+}
+
+.timeline-item.left::after {
+  right: -15px;
+}
+
+.timeline-item.right::after {
+  left: -15px;
+}
+
+.timeline-year {
+  display: inline-block;
+  color: var(--color-secondary);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.timeline-content h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Side-by-Side Image Styles - Matching Gallery "Museum Wall" */
+.timeline-image-container {
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  max-width: 300px;
+  aspect-ratio: 3/2;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: default;
+  box-shadow: var(--shadow-card);
+  border: 4px solid white;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  z-index: 10;
+}
+
+.timeline-image-container:hover {
+  transform: translateY(-5px);
+  /* Move up slightly like gallery */
+  box-shadow: var(--shadow-strong);
+  z-index: 12;
+}
+
+/* Positioning relative to the 50% .timeline-item wrapper */
+/* For Left Item: Image goes to the Right (100% + gap) */
+.timeline-item.left .image-right {
+  left: 112%;
+  text-align: left;
+}
+
+/* For Right Item: Image goes to the Left (-100% - gap) */
+.timeline-item.right .image-left {
+  right: 112%;
+  text-align: right;
+}
+
+.timeline-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.3) contrast(1.1);
+  /* Match Gallery Vintage Feel */
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+}
+
+.timeline-image-container:hover img {
+  transform: scale(1.1);
+  /* Zoom inside */
+  filter: sepia(0) contrast(1);
+  /* Reveal color */
+}
+
+/* Mobile Timeline overrides */
+@media screen and (max-width: 900px) {
+  .timeline-container::after {
+    left: 40px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 20px;
+    text-align: left;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    /* Space between items */
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0%;
+    text-align: left;
+  }
+
+  .timeline-item::after {
+    left: 25px;
+    right: auto;
+  }
+
+  .timeline-item.left::after {
+    right: auto;
+  }
+
+  /* reset */
+
+  /* Reset Absolute Image - Stack it */
+  .timeline-image-container {
+    position: relative;
+    top: 0;
+    left: 0 !important;
+    right: auto !important;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    transform: none !important;
+  }
+
+  .timeline-image-container:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+/* Gallery Styles - Museum Wall */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  /* Frame-like */
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: all 0.5s ease;
+  border: 5px solid white;
+  background: white;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+  filter: sepia(0.3) contrast(1.1);
+  /* Historical vintage feel */
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: sepia(0) contrast(1);
+  /* Reveal full color on hover */
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+  padding: 2rem 1.5rem 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  font-family: var(--font-body);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightbox - Enhanced */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.95);
+  /* Deep dark background */
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.lightbox-content {
+  text-align: center;
+  max-width: 90vw;
+}
+
+.lightbox-content img {
+  border: 10px solid white;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  max-height: 70vh;
+  /* Reduced from default/inherited large size */
+  max-width: 60vw;
+  object-fit: contain;
+}
