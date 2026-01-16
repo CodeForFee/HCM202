@@ -427,8 +427,8 @@ function App() {
                 <div style={{ padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <h4 style={{ color: '#002147', marginBottom: '0.75rem', fontWeight: '800', fontSize: '1.25rem' }}>🇫🇷 Thực dân Pháp</h4>
                   <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#1a1a1a' }}>
-                    Đã chia nước ta thành 3 kỳ: <strong>Bắc Kỳ, Trung Kỳ, Nam Kỳ</strong>, với chế độ cai trị
-                    khác nhau để chia rẽ dân tộc.
+                    Đã từng chia nước ta thành 3 kỳ: <strong>Bắc Kỳ, Trung Kỳ, Nam Kỳ</strong>, với chế độ cai trị
+                    khác nhau để làm suy yếu tinh thần đoàn kết dân tộc.
                   </p>
                 </div>
               </div>
@@ -440,7 +440,7 @@ function App() {
                 <div style={{ padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <h4 style={{ color: '#b08d1e', marginBottom: '0.75rem', fontWeight: '800', fontSize: '1.25rem' }}>🎭 "Nam Kỳ tự trị"</h4>
                   <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#1a1a1a' }}>
-                    Sau 1945, Pháp lập ra "Chính phủ Nam Kỳ tự trị" hòng tách Nam Bộ ra khỏi Việt Nam, nhưng bị nhân dân tẩy chay.
+                    Sau Cách mạng Tháng Tám, chúng tiếp tục bày ra trò “Nam Kỳ tự trị” nhằm tách miền Nam khỏi Việt Nam
                   </p>
                 </div>
               </div>
@@ -452,7 +452,7 @@ function App() {
                 <div style={{ padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <h4 style={{ color: '#c41e3a', marginBottom: '0.75rem', fontWeight: '800', fontSize: '1.25rem' }}>📜 Hiệp định Giơnevơ 1954</h4>
                   <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#1a1a1a' }}>
-                    Đất nước tạm thời bị chia cắt tại vĩ tuyến 17. Mỹ thay chân Pháp, âm mưu chia cắt lâu dài Việt Nam.
+                    Đất nước tạm thời bị chia làm hai miền
                   </p>
                 </div>
               </div>
@@ -527,19 +527,19 @@ function App() {
           </div>
 
           {/* Di chúc */}
-          {/* <div style={{ marginTop: '3rem', textAlign: 'center', padding: '2rem', background: 'white', borderRadius: '8px', boxShadow: 'var(--shadow-card)' }}>
-            <h4 style={{ color: 'var(--color-primary)', marginBottom: '1rem', fontSize: '1.4rem' }}>📜 Di chúc (1969)</h4>
+          <div style={{ marginTop: '3rem', textAlign: 'center', padding: '2rem', background: 'white', borderRadius: '8px', boxShadow: 'var(--shadow-card)' }}>
+            {/* <h4 style={{ color: 'var(--color-primary)', marginBottom: '1rem', fontSize: '1.4rem' }}>📜 Di chúc </h4> */}
             <p style={{ maxWidth: '700px', margin: '0 auto', lineHeight: '1.8' }}>
               Ngay cả trong Di chúc, khi đất nước vẫn còn chiến tranh, Hồ Chí Minh vẫn tin tưởng chắc chắn rằng
               <strong> Việt Nam sẽ thống nhất</strong>, nhân dân hai miền sẽ sum họp một nhà.
             </p>
             <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(193, 154, 107, 0.1)', borderRadius: '4px' }}>
               <p style={{ fontStyle: 'italic', color: 'var(--color-primary)', fontSize: '1.1rem' }}>
-                Trong tư tưởng của Người: <strong>Độc lập dân tộc không thể tách rời thống nhất và toàn vẹn lãnh thổ</strong>.
-                Một đất nước bị chia cắt thì chưa thể gọi là độc lập trọn vẹn.
+                <strong>"Độc lập dân tộc không thể tách rời thống nhất và toàn vẹn lãnh thổ.
+                  Một đất nước bị chia cắt thì chưa thể gọi là độc lập trọn vẹn"</strong>
               </p>
             </div>
-          </div> */}
+          </div>
         </Section>
 
         {/* PART 5: Hành trình Lịch sử */}
