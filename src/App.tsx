@@ -577,7 +577,7 @@ function App() {
         </Section>
 
         {/* Mini Game Section */}
-        {/* <Section title="Mini Game">
+        {/* <Section title="Mini Game"////>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
               src="/qr-code.jpg"
