@@ -577,7 +577,7 @@ function App() {
         </Section>
 
         {/* Mini Game Section */}
-        <Section title="Mini Game">
+        {/* <Section title="Mini Game">
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <img
               src="/qr-code.jpg"
@@ -598,7 +598,6 @@ function App() {
             <p style={{ marginTop: '1rem', color: '#666', fontSize: '0.9rem' }}>Quét mã để xem chi tiết</p>
           </div>
 
-          {/* QR Lightbox */}
           {showQR && (
             <div
               style={{
@@ -630,7 +629,7 @@ function App() {
               />
             </div>
           )}
-        </Section>
+        </Section> */}
 
         <footer style={{ padding: '60px 20px', background: '#1a1a1a', color: '#f4f1ea', textAlign: 'center', borderTop: '4px solid var(--color-secondary)' }}>
           <div className="container">
