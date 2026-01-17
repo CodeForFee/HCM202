@@ -8,7 +8,10 @@ import VideoQuote from './components/VideoQuote';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 
+import { useState } from 'react';
+
 function App() {
+  const [showQR, setShowQR] = useState(false);
   return (
     <>
       <header style={{
@@ -571,6 +574,62 @@ function App() {
         {/* Gallery Section */}
         <Section title="Di sản Hình ảnh" className="bg-light">
           <Gallery />
+        </Section>
+
+        {/* Mini Game Section */}
+        <Section title="Mini Game">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img
+              src="/qr-code.jpg"
+              alt="QR Code"
+              onClick={() => setShowQR(true)}
+              style={{
+                maxWidth: '200px',
+                height: 'auto',
+                borderRadius: '12px',
+                boxShadow: 'var(--shadow-card)',
+                border: '4px solid white',
+                cursor: 'pointer',
+                transition: 'transform 0.2s'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            />
+            <p style={{ marginTop: '1rem', color: '#666', fontSize: '0.9rem' }}>Quét mã để xem chi tiết</p>
+          </div>
+
+          {/* QR Lightbox */}
+          {showQR && (
+            <div
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(0,0,0,0.8)',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
+                zIndex: 9999,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                cursor: 'pointer'
+              }}
+              onClick={() => setShowQR(false)}
+            >
+              <img
+                src="/qr-code.jpg"
+                alt="QR Code Zoomed"
+                style={{
+                  maxWidth: '90%',
+                  maxHeight: '90vh',
+                  borderRadius: '12px',
+                  boxShadow: '0 0 30px rgba(0,0,0,0.5)'
+                }}
+              />
+            </div>
+          )}
         </Section>
 
         <footer style={{ padding: '60px 20px', background: '#1a1a1a', color: '#f4f1ea', textAlign: 'center', borderTop: '4px solid var(--color-secondary)' }}>
