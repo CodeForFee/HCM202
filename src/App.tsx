@@ -8,10 +8,10 @@ import VideoQuote from './components/VideoQuote';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function App() {
-  const [showQR, setShowQR] = useState(false);
+  // const [showQR, setShowQR] = useState(false);
   return (
     <>
       <header style={{
